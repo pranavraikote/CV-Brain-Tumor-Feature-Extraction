@@ -115,17 +115,7 @@ for i in neg_list:
     new_data = pd.DataFrame([d], columns=['Area','Perimeter','Convex Area','Solidity','Equivalent Diameter','Major Axis','Minor Axis','Eccentricity','Class'])
     data = data.append(new_data, ignore_index=True)
     
-'''
-d = image_process(l[20])
-
-d.append(0)
-new_data = pd.DataFrame([d], columns=['Area','Perimeter','Convex Area','Solidity','Equivalent Diameter','Major Axis','Minor Axis','Eccentricity','Class'])
-data = data.append(new_data, ignore_index=True)
-
-
-
-
-'''
+data.to_csv('Dataset.csv')
 
 
 
