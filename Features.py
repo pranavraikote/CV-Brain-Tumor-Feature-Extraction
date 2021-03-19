@@ -21,7 +21,7 @@ def image_process(path):
     
     ret, thresh = cv2.threshold(blur, 175, 230, 0)
     
-    _, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     
     new_frame = cv2.drawContours(frame, contours, -1, (0,255,0), 3)
 
