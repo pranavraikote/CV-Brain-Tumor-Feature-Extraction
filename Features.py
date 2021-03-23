@@ -73,7 +73,11 @@ def image_process(path):
         data_export.append(equi_diameter)
         print('Equivalent Diameter - {}'.format(equi_diameter))
         
-        (x2,y2), (MA,ma), angle = cv2.fitEllipse(cnt)
+        try:
+            (x2,y2), (MA,ma), angle = cv2.fitEllipse(cnt)
+        except:
+            MA = 0
+            ma = 0
         data_export.append(MA)
         data_export.append(ma)
         print('Major Axis - {}'.format(MA))
